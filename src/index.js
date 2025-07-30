@@ -6,6 +6,7 @@ const getFonts = function () {
     if (FONTS) return FONTS;
     /* eslint-disable global-require */
     FONTS = {
+        // Scratch
         'Sans Serif': require('base64-loader!./NotoSans-Medium.ttf'),
         'Serif': require('base64-loader!./SourceSerifPro-Regular.otf'),
         'Handwriting': require('base64-loader!./handlee-regular.ttf'),
@@ -13,14 +14,23 @@ const getFonts = function () {
         'Curly': require('base64-loader!./Griffy-Regular.ttf'),
         'Pixel': require('base64-loader!./Grand9K-Pixel.ttf'),
         // Xtraflexidisc is saved as Scratch for backwards-compat, this needs visual renaming
-        'Scratch': require('base64-loader!./Xtraflexidisc.otf'),
+        'Scratch': require('base64-loader!./BLACKBOYSONMOPEDS.ttf'),
+        'Branches': require('base64-loader!./Xtraflexidisc.otf'),
+        // PenguinMod
         'Technological': require('base64-loader!./MonospaceBold.ttf'),
         'Bubbly': require('base64-loader!./QTKooper.otf'),
         'Bits and Bytes': require('base64-loader!./freecam-v2.ttf'),
         'Playful': require('base64-loader!./BadComic-Regular.ttf'),
         'Arcade': require('base64-loader!./PressStart2P.ttf'),
         'Archivo': require('base64-loader!./Archivo-Regular.ttf'),
-        'Archivo Black': require('base64-loader!./Archivo-Black.ttf')
+        'Archivo Black': require('base64-loader!./Archivo-Black.ttf'),
+        // Dash
+        'Gogono': require('base64-loader!./gogono-cocoa-mochi-cyrillic.otf'),
+        'Just Bubble': require('base64-loader!./JustBubble.ttf'),
+        'Lilita One Regular': require('base64-loader!./Lilita One Regular.ttf'),
+        'Minecrafter': require('base64-loader!./Minecrafter.Reg.ttf'),
+        'Obelix Pro': require('base64-loader!./obelix_pro.ttf'),
+        'Jet Brains Mono': require('base64-loader!./JetBrainsMono-Light.ttf')
     };
     /* eslint-enable global-require */
 
@@ -46,4 +56,9 @@ const getFonts = function () {
     return FONTS;
 }
 
+const loadFonts = function () {
+    return Promise.resolve(getFonts());
+};
+
 module.exports = getFonts;
+module.exports.loadFonts = loadFonts;
