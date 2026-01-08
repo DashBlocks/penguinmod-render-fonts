@@ -32,6 +32,8 @@ const getFonts = function () {
         'Obelix Pro': require('base64-loader!./obelix_pro.ttf'),
         'Jet Brains Mono': require('base64-loader!./JetBrainsMono-Light.ttf'),
         'Rubik': require('base64-loader!./Rubik.ttf')
+        // Turbowarp
+        'Turbowarp': require('base64-loader!./ScratchSavers_b2.ttf')
     };
     /* eslint-enable global-require */
 
